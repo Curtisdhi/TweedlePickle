@@ -1,10 +1,8 @@
 import asyncio
 import discord
-import youtube_dl
 import os
 from discord.ext import commands
 from dotenv import load_dotenv
-from ytdl_source import YTDLSource
 from music import Music
 
 load_dotenv()
@@ -20,7 +18,6 @@ async def on_ready():
     print('Logged in as {0} ({0.id})'.format(bot.user))
     print('------')
 
-    music.cleanDownloads()
 
 bot.add_cog(music)
 bot.run(token)
